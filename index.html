@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A dictionary designed for pikachu!">
+    <title>Pikanary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="pikachu-ico.png">
+</head>
+<body>
+    <div class="banner">
+        <h1><a href="/">Pikanary</a></h1>
+        <span>A dictionary for pikachu</span>
+    </div>
+    <main>
+        <section class="yellow landing">
+            <div class="section-container">
+                <div class="bordered-card landing-card">
+                    <div class="card-container">
+                        <div class="search-container">
+                            <input type="text" id="word-input" placeholder="Type a word you don't know the meaning of :&rpar;">
+                            <div class="search-results"></div>
+                        </div>
+                        <span>...or select one of these words from below!</span>
+                        <div class="example-words" id="example-words"></div>
+                    </div>
+                </div>
+                <a href="/games.html" class="ask-what-games">What games do I know?</a>
+            </div>
+        </section>
+        <section class="yellow">
+            <div class="section-container">
+                <div class="search-container">
+                    <input type="text" id="word-input2" placeholder="Type a word you don't know the meaning of :&rpar;">
+                    <div class="search-results"></div>
+                </div>
+                <div class="word-defs">
+                    <!-- <div class="bordered-card word-def">
+                        <div class="card-container">
+                            <h2>acumen</h2>
+                            <span class="type">noun</span>
+                            <p class="def">keenness and depth of perception, discernment, or discrimination especially in practical matters</p>     
+                            <p class="translation">- Translation: মুরস &lpar;Murasa&rpar;</p>                       
+                            <div class="similar-words">
+                                Similar words:
+                                <button>Lorem.</button><button>Facilis!</button><button>Perspiciatis!</button><button>Repudiandae.</button><button>Voluptatum!</button><button>Voluptatum!</button>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <section class="white">
+            <div class="section-container">
+                <div class="results-section results-found vid-game-lines">
+                    <h2><span class="amount">5</span> results found for <span class="word">acumen</span></h2>
+                    <span>from this <a href="/games.html">list of video games</a> :&rpar;</span>
+                    <div class="results">
+                        <!-- <div class="result">
+                            <p>"Cryogenics," they call it. But there were problems with it. Given Elisabet’s technological <span class="word">acumen</span>, I can’t definitively rule out that she found a way to make herself immortal. But this is speculation - wasting time.</p>
+                            <span>Sylens | <span class="source">Cyberpunk 2077</span></span>
+                        </div>
+                        <div class="result">
+                            <p>"Cryogenics," they call it. But there were problems with it. Given Elisabet’s technological <span class="word">acumen</span>, I can’t definitively rule out that she found a way to make herself immortal. But this is speculation - wasting time.</p>
+                            <span>Geralt | <span class="source">The Witcher</span></span>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="results-section results-found normal-lines">
+                    <h2>...and some non-video game lines for convenience :&gt;</h2>
+                    <div class="results">
+                        <!-- <div class="result">
+                            <p>"Cryogenics," they call it. But there were problems with it. Given Elisabet’s technological <span class="word">acumen</span>, I can’t definitively rule out that she found a way to make herself immortal. But this is speculation - wasting time.</p>
+                            <span>Sylens | <span class="source">Cyberpunk 2077</span></span>
+                        </div>
+                        <div class="result">
+                            <p>"Cryogenics," they call it. But there were problems with it. Given Elisabet’s technological <span class="word">acumen</span>, I can’t definitively rule out that she found a way to make herself immortal. But this is speculation - wasting time.</p>
+                            <span>Geralt | <span class="source">The Witcher</span></span>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="results-section results-not-found">
+                    <h2>No voicelines found with the word <span class="word">acumen</span> :(</h2>
+                    <span class="silver-lining-msg">...but here are some results from non-video game lines :,3</span>
+                    <div class="results">
+                        <!-- <div class="result">
+                            <p>"Cryogenics," they call it. But there were problems with it. Given Elisabet’s technological <span class="word">acumen</span>, I can’t definitively rule out that she found a way to make herself immortal. But this is speculation - wasting time.</p>
+                            <span>Sylens | <span class="source">Cyberpunk 2077</span></span>
+                        </div>
+                        <div class="result">
+                            <p>"Cryogenics," they call it. But there were problems with it. Given Elisabet’s technological <span class="word">acumen</span>, I can’t definitively rule out that she found a way to make herself immortal. But this is speculation - wasting time.</p>
+                            <span>Geralt | <span class="source">The Witcher</span></span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="loading-overlay">
+        <img src="pikachu-loading.gif" alt="gif pikachu squishing its own cheeks">
+        <span>Loading...</span>
+    </div>
+    <template id="word-def-template">
+        <div class="bordered-card word-def">
+            <div class="card-container">
+                <h2>Word</h2>
+                <span class="type">Noun/Verb</span>
+                <p class="def">Definition</p>
+                <p class="translation">Translation</p>
+                <div class="similar-words"></div>
+            </div>
+        </div>
+    </template>
+    <template id="result-template">        
+        <div class="result">
+            <p>Quote goes here</p>
+            <span>Source goes here</span>
+        </div>
+    </template>
+    <script src="index.js"></script>
+</body>
+</html>
