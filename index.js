@@ -183,8 +183,8 @@
                 if (inflections.length == 0) throw new Error('No inflections found!')
                 
                 return Promise.all([
-                    fetch(`https://pikanary-api.herokuapp.com/scripts?words=${inflections.join(',')}`),
-                    fetch(`https://pikanary-api.herokuapp.com/translate?words=${definitions.map(worddef => worddef.meta.id.split(':')[0]).join(',')}`),
+                    fetch(`//pikanary-api.onrender.com/scripts?words=${inflections.join(',')}`),
+                    fetch(`//pikanary-api.onrender.com/translate?words=${definitions.map(worddef => worddef.meta.id.split(':')[0]).join(',')}`),
                 ])
             })
             .then(res => Promise.all(res.map(ress => ress.json())))
